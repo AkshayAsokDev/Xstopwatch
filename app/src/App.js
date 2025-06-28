@@ -38,15 +38,16 @@ function App() {
 
       timer = setInterval(() => {
 
-        const temp = time + 1;
+        setTime(prevTime => {
 
-        if (temp === 60) {
-          setHour(hour+1);
-          setTime(0);
-        }
-        else {
-          setTime(temp);
-        }
+          if (prevTime === 59) {
+            setHour(prevHour => prevHour+1);
+            return 0
+          }
+
+          return prevTime+1
+
+        })
 
       }, 1000)
       
@@ -57,7 +58,7 @@ function App() {
       clearInterval(timer);
     }
 
-  }, [hour, time, start, reset])
+  }, [start, reset])
 
 
   return (
