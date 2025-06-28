@@ -65,7 +65,7 @@ function App() {
       
       <h1>Stopwatch</h1>
 
-      <p>{`Time: ${hour}:${time}`}</p>
+      <p>{`Time: ${hour}:${time.toString().padStart(2, '0')}`}</p>
       
       {
         start ? (<button onClick={handleStart} >Start</button>) : (<button onClick={handleStop} >Stop</button>)
