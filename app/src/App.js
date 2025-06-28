@@ -31,6 +31,7 @@ function App() {
       setTime(0);
       setStart(true);
       setReset(false);
+      return
     }
 
     let timer;
