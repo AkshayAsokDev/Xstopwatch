@@ -36,7 +36,7 @@ function App() {
     let timer;
     if(start === false) {
 
-      timer = setTimeout(() => {
+      timer = setInterval(() => {
 
         const temp = time + 1;
 
@@ -54,7 +54,7 @@ function App() {
     }
 
     return () => {
-      clearTimeout(timer);
+      clearInterval(timer);
     }
 
   }, [hour, time, start, reset])
