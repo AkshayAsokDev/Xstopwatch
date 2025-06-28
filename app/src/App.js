@@ -29,6 +29,7 @@ function App() {
     if(reset === true) {
       setHour(0);
       setTime(0);
+      setStart(true);
       setReset(false);
     }
 
